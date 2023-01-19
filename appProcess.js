@@ -21,6 +21,10 @@ app.get("/datos", (req, res) => {
   res.send(html);
 });
 
+app.get("/tarea-1",(req,res)=>{
+  res.send("<h1>TAREA-1</h1>")
+})
+
 app.use('*', (req, res)=>{
     res.status(404).send({error:-2, descripcion:`ruta ${req.baseUrl} metodo ${req.method} no implementado`})
     if (res.status(404)) logger.warn("Ruta no existente")
