@@ -1,0 +1,25 @@
+{
+  "name": "desafio14_analisis-performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "appProcess.js",
+  "scripts": {
+    "start": "node appProcess.js",
+    "test": "node benchmark.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "forever": "^4.0.3",
+    "minimist": "^1.2.7",
+    "nodemon": "^2.0.20",
+    "winston": "^3.8.2",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "autocannon": "^7.10.0"
+  }
+}
