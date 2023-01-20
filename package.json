@@ -4,8 +4,7 @@
   "description": "",
   "main": "appProcess.js",
   "scripts": {
-    "start": "node appProcess.js",
-    "test": "node benchmark.js"
+    "start": "node appProcess.js"
   },
   "keywords": [],
   "author": "",
