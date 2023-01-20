@@ -4,6 +4,7 @@ const cluster = require("cluster");
 const os = require("os");
 const config = require("./config");
 const logger = require("./logger/winston");
+require('dotenv').config()
 
 // const PORT = process.argv[2] || 8080;
 const PORT = process.env.PORT || 8080;
