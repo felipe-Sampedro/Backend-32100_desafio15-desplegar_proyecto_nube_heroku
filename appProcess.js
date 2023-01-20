@@ -11,7 +11,11 @@ const app = express();
 
 app.use("/api", apisRoutesProcess);
 
-//app.use(logger);
+
+app.get("/", (req, res) => {
+  res.send("<h1>Pagina Home</h1>");
+});
+
 
 //Muestra servidor
 app.get("/datos", (req, res) => {
