@@ -5,7 +5,8 @@ const os = require("os");
 const config = require("./config");
 const logger = require("./logger/winston");
 
-const PORT = process.argv[2] || 8080;
+// const PORT = process.argv[2] || 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
