@@ -34,16 +34,20 @@ app.use('*', (req, res)=>{
     if (res.status(404)) logger.warn("Ruta no existente")
 });
 
-const clusterMode = process.argv[3] === "CLUSTER";
+// const clusterMode = process.argv[3] === "CLUSTER";
 
-if (clusterMode && cluster.isPrimary) {
-  const NUM_WORKERS = os.cpus().length; //cantidad de nucleos
-  for (let i = 0; i < NUM_WORKERS; i++) {
-    cluster.fork();
-  }
-} else {
-  app.listen(PORT, config.HOST, () => {
-    // console.log(`Server listening on http://${config.HOST}:${PORT}`);
-    logger.log('info',`Server listening on http://${config.HOST}:${PORT}`);
-  });
-}
+// if (clusterMode && cluster.isPrimary) {
+//   const NUM_WORKERS = os.cpus().length; //cantidad de nucleos
+//   for (let i = 0; i < NUM_WORKERS; i++) {
+//     cluster.fork();
+//   }
+// } else {
+//   app.listen(PORT, config.HOST, () => {
+//     // console.log(`Server listening on http://${config.HOST}:${PORT}`);
+//     logger.log('info',`Server listening on http://${config.HOST}:${PORT}`);
+//   });
+// }
+
+app.listen(PORT, () => {
+  console.log("Ready on port => ", PORT);
+})
