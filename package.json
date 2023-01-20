@@ -4,7 +4,7 @@
   "description": "",
   "main": "appProcess.js",
   "scripts": {
-    "start": "node appProcess.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
