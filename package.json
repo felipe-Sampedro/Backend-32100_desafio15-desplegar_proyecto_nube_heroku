@@ -2,7 +2,7 @@
   "name": "desafio14_analisis-performance",
   "version": "1.0.0",
   "description": "",
-  "main": "appProcess.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
